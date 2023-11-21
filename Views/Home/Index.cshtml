@@ -3,6 +3,51 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <table class="table table-hover overflow-scroll">
+        <thead role="rowgroup">
+
+            <tr role="row">
+                <th role="columnheader">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th role="columnheader">
+                    @Html.DisplayNameFor(model => model.Rut)
+                </th>
+                <th role="columnheader">
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th role="columnheader">
+                    @Html.DisplayNameFor(model => model.Cuenta)
+                </th>
+            </tr>
+        </thead>
+
+
+        @foreach (var item in Model)
+        {
+            <tbody role="rowgroup">
+                <tr role="row">
+                    <td role="row">
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td role="row">
+                        @Html.DisplayFor(modelItem => item.RutColaborador)
+                    </td>
+                    <td role="row">
+                        @Html.DisplayFor(modelItem => item.TelefonoColaborador)
+                    </td>
+                    <td role="row">
+                        @Html.DisplayFor(modelItem => item.CuentaColaborador)
+                    </td>
+
+                    <td role="row">
+                        <a class="btn btn-outline-primary" href="/Clientes/Edit/@item.Id">Editar</a>
+                        <a class="btn btn-outline-success" href="/Clientes/Details/@item.Id">Detalles</a>
+                        <a class="btn btn-danger" href="/Clientes/Delete/@item.Id">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+
+    </table>
 </div>

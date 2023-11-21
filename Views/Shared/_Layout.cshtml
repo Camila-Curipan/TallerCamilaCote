@@ -9,21 +9,39 @@
     <link rel="stylesheet" href="~/TallerCamilaCote.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header style="width:auto; height:80px;" >
+    
+    <header>
+        <div class="container-fluid">
+            <div class="encabezado">
+                <img id="logo" src="~/OIP.jpg" alt="Logo" width="auto" height="auto" class="d-inline-block align-text-top">
+                <h1 id="empresa">Taller de prestación de servicios en confección y planchado Camila Coté</h1>
+            </div>
+                
+        </div>
 
     </header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Guias</a>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active"href="#">Gestionar Colaboradores</a>
-                    <a class="nav-link active" href="#">Gestionar Servicios</a>
-                    <a class="nav-link active" href="#">Gestionar Prendas</a>
-                </div>
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+        <div class="container-nav">
+            <h2 id="nav-title">Taller Camila Coté</h2>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación"
+                    aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" id="nav-button">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-md-end">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Gestionar colaboradores", "Index", "Clientes", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Gestionar precios", "GPrecios", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Gestionar prendas", "Gprendas", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
             </div>
         </div>
     </nav>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

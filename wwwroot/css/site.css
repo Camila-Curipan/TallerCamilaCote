@@ -7,21 +7,96 @@ html {
     font-size: 16px;
   }
 }
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
-header {
-    height: 200px;
-    width: auto;
+
+.encabezado {
+   
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
 }
+
+.encabezado #empresa {
+    margin:20px;
+    font-size:1.5em
+}
+
+#logo{
+    width:10em;
+    height:10em;
+}
+
+#empresa {
+    font-size: 1em;
+    color: #00365e;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/***************navBar****************/
+.navbar {
+    display: flex;
+    background-color: #00365e;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.container-nav {
+    display: contents;
+}
+
+
+
+.nav-link {
+    color: white;
+}
+
+#nav-title{
+    color: white;
+    font-size:2em;
+    padding:.2em;
+    margin:.2em;
+}
+.navbar ul {
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-nav li {
+    font-size: larger;
+    letter-spacing: 2.5px;
+}
+
+
+.collapse ul li {
+    float: right;
+}
+
+.collapse {
+    display: flex;
+    flex-direction: column !important;
+    align-items: start;
+}
+.bi{
+    color:white;
+}
+
